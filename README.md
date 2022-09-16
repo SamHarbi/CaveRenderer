@@ -37,7 +37,7 @@ Scene.AddObject(Square);
 Then in the Buffers and Shaders Section (This will be changed later) we do `renderer.stage()` with an argument of a DrawnObject or a Layer which will be sent as a single vertex buffer to the GPU. ~~This should be the end and all that you need to do but currently you also need to manually call glDrawArrays in the While Loop.~~ This no longer need to be done, instead use `renderer.draw()` which figures out on it's own how many objects you've staged and handles index drawing.  
 
 But Once that's all done you end up with a nice square (shaders are also a WIP) 
-![Screenshot](images/demo.png)
+![Screenshot](images/demo.PNG)
 
 ## Summary + Ref in creating this 
 This code is quite simple so far but I am hoping to continue adding to it as I learn more about OpenGL. So far I have used the following resources which may come in handy to anyone who is also trying to learn OpenGL like me. 
