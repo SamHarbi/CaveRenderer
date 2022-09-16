@@ -7,6 +7,9 @@
 
 class Renderer {
 
+	private:
+		int indexBoundCount;
+
 	public:
 		Renderer();
 
@@ -27,12 +30,12 @@ class Renderer {
 		void stage(DrawnObject& DO);
 		void stage(Layer& layer);
 
-		unsigned int generateBuffer();
+		GLuint generateBuffer();
 
-		void bindIBO(unsigned int ibo, unsigned int indices[], int size);
+		void bindIBO(GLuint ibo, GLuint indices[], int size);
 
-		//Creates and binds a buffer 
-		void createBuffer();
+		//Draw all vertices in Buffer
+		void draw(Layer& layer);
 
 };
 
